@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
         backgroundColor: '#f8f9fa',
         padding: '2rem 0',
         width:"1904px"
-        // marginTop: 'auto',
       }}
     >
       <Container >

@@ -12,6 +12,7 @@ const Form:React.FC=()=> {
   const width:SxProps<Theme>={
     width:"80%"
   }
+
   interface Data{
     name:string,
     email:string,

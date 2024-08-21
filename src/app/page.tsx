@@ -6,9 +6,11 @@ import Link from "next/link";
 import { TableFooter } from '@mui/material';
 import { Box } from "@mui/system";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { SxProps, Theme } from '@mui/system';
-import { useRouter } from "next/navigation";
+import { SxProps, Theme } from '@mui/system';//used for type define
+import { useRouter } from "next/navigation";//used for navigation
 import Footer from "./footer/page";
+
+//functional component
 export default function Home() {
   const toobar:SxProps<Theme>={
     display:"flex",
@@ -16,6 +18,7 @@ export default function Home() {
     gap:"20px",
     alignItems:"center"
   }
+  //userouter is a hook
 const navigate=useRouter()
 
   return (
@@ -38,9 +41,6 @@ const navigate=useRouter()
  <Box height={"80vh"} display={"flex"} alignItems={"end"}  >
  <Footer></Footer>
  </Box>
-
-
     </>
-    
   );
 }
