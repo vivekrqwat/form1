@@ -1,10 +1,10 @@
 "use client";
 import React from 'react'
-
+import dayjs from 'dayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
+import { DateTimeField, LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { DemoContainer, DemoItem } from '@mui/x-date-pickers/internals/demo';
 const Date:React.FC =()=> {
 
     return (
@@ -15,6 +15,9 @@ const Date:React.FC =()=> {
         <DatePicker label="enter date"  />
         <TimePicker label="time"></TimePicker>
         </DemoContainer>
+                <DemoItem label="Date Time">
+          <DateTimeField defaultValue={dayjs('2022-04-17T15:30')} />
+        </DemoItem>
 
         </LocalizationProvider>
       </div>
