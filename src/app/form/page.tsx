@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react'
-import{AppBar, Box, Button, Grid, TextField, Toolbar, Typography} from "@mui/material"
+import{AppBar, Box, Button, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, TextField, Toolbar, Typography} from "@mui/material"
 import { SxProps, Theme } from '@mui/system';
 import Footer from '../footer/page';
 
@@ -37,6 +37,12 @@ console.log(e,"t")
     setT(!t)
   
   };  
+
+   const [value, setValue] = React.useState('female');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue((event.target as HTMLInputElement).value);
+  };
   console.log("sam",data)
   return (
     <div>
@@ -78,6 +84,23 @@ console.log(e,"t")
     <Grid item xs={12}> <TextField sx={width} placeholder='Country'>ggg</TextField></Grid>
 
       </Grid>
+
+          <Grid item xs={6} sx={{height:"80px"}}>
+      <FormControl>
+        <FormLabel>
+          Gender
+        </FormLabel>
+        <RadioGroup
+    aria-labelledby="demo-controlled-radio-buttons-group"
+    name="controlled-radio-buttons-group"
+    value={value}
+    onChange={handleChange}
+  >
+    <FormControlLabel value="female" control={<Radio />} label="Female" />
+    <FormControlLabel value="male" control={<Radio />} label="Male" />
+  </RadioGroup>
+      </FormControl>
+    </Grid>
       <Button type='submit'  fullWidth variant='contained'>SUBMIT</Button>
       </form>}
       <h1></h1>
